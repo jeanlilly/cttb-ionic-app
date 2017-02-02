@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar color="header">
+    <ion-title>Welcome</ion-title>
+    <button ion-button color="darkpink" (click)="viewFilter()" clear>Filter</button>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+<!--   <ion-card *ngIf="first_item">
+    <img src="{{assets[0].fields.file.url}}"/>
+    <div class="card-title">{{first_item.fields.title}}</div>
+  </ion-card> -->
+  <ion-list>
+    <ion-item *ngFor="let item of items;"  class="card-background-page">
+      <home-card [id]="item.fields.featuredImage.sys.id" [assets]="assets" [item]="item" ></home-card>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+
+ <!--  <ion-grid>
+    <ion-row *ngFor="let item for items; let i=index; let isOdd=odd; let isEven=even;">
+      <ion-col width-50>
+        <ion-card>
+          <img src="img/nin-live.png"/>
+          <ion-card-content>
+            <ion-card-title>
+              Nine Inch Nails Live
+              </ion-card-title>
+          </ion-card-content> 
+        </ion-card>
+      </ion-col>
+      <ion-col width-50>
+        <ion-card>
+          <img src="img/nin-live.png"/>
+          <ion-card-content>
+            <ion-card-title>
+              Nine Inch Nails Live
+              </ion-card-title>
+          </ion-card-content>getAssetById(item.fields.featuredImage.sys.id).fields.file.url
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>    -->

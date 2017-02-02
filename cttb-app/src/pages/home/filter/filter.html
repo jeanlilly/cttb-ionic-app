@@ -1,0 +1,87 @@
+<ion-header>
+  <ion-navbar color="header">
+    <ion-title>Filter</ion-title>
+    <button ion-button color="darkpink" clear>Done</button>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+<!--   <ion-card *ngIf="first_item">
+    <img src="{{assets[0].fields.file.url}}"/>
+    <div class="card-title">{{first_item.fields.title}}</div>
+  </ion-card> -->
+  <ion-list>
+    <ion-list-header>
+      Category
+    </ion-list-header>
+    <ion-item>
+      <ion-toggle checked="true"></ion-toggle>
+      <ion-label>Sutras</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-toggle checked="true"></ion-toggle>
+      <ion-label>Talks</ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-list-header>
+      Media
+    </ion-list-header>
+    <ion-grid>
+      <ion-row>
+        <ion-col width-25><button ion-button clear>Text</button></ion-col>
+        <ion-col width-25><button ion-button clear>Video</button></ion-col>
+        <ion-col width-25><button ion-button clear>Audio</button></ion-col>
+        <ion-col width-25><button ion-button clear>Image</button></ion-col>        
+      </ion-row>
+    </ion-grid>
+  </ion-list>    
+  <ion-list>
+    <ion-list-header>
+      Language
+    </ion-list-header>
+    <ion-grid>
+      <ion-row>
+        <ion-col width-25><button ion-button clear>Chinese</button></ion-col>
+        <ion-col width-25><button ion-button clear>English</button></ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </ion-list>
+  <ion-footer>
+    <ion-toolbar>
+      100+ Results
+      <ion-buttons end>
+        <button ion-button color="darkpink" outline>
+          Reset Filter
+        </button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-footer>
+</ion-content>
+
+
+ <!--  <ion-grid>
+    <ion-row *ngFor="let item for items; let i=index; let isOdd=odd; let isEven=even;">
+      <ion-col width-50>
+        <ion-card>
+          <img src="img/nin-live.png"/>
+          <ion-card-content>
+            <ion-card-title>
+              Nine Inch Nails Live
+              </ion-card-title>
+          </ion-card-content> 
+        </ion-card>
+      </ion-col>
+      <ion-col width-50>
+        <ion-card>
+          <img src="img/nin-live.png"/>
+          <ion-card-content>
+            <ion-card-title>
+              Nine Inch Nails Live
+              </ion-card-title>
+          </ion-card-content>getAssetById(item.fields.featuredImage.sys.id).fields.file.url
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>    -->
