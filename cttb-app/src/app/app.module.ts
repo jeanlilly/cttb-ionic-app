@@ -10,6 +10,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { Card } from '../pages/home/card';
 import { SearchResult } from '../pages/search/result';
 import { FilterPage } from '../pages/home/filter/filter';
+import { PostPage } from '../pages/post/post';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { FilterPage } from '../pages/home/filter/filter';
     TabsPage,
     Card,
     SearchResult,
-    FilterPage
+    FilterPage,
+    PostPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -35,7 +37,8 @@ import { FilterPage } from '../pages/home/filter/filter';
     HomePage,
     SearchPage,
     TabsPage,
-    FilterPage    
+    FilterPage,
+    PostPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, Storage]
 })

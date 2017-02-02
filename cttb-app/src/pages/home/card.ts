@@ -1,4 +1,7 @@
 import { Component, Input } from '@angular/core';
+import { PostPage } from '../post/post';
+import { NavController, NavParams } from 'ionic-angular';
+
 
 @Component({
   selector: 'home-card',
@@ -9,6 +12,9 @@ export class Card {
   @Input() assets: any
   @Input() item: any  
   asset: any
+
+  constructor(public navCtrl: NavController) {
+  }
 
 
   ngOnInit() {
@@ -24,5 +30,9 @@ export class Card {
           })
       }
       return
+  }
+
+  viewPost(item:any) {
+    this.navCtrl.push(PostPage, {item:item, assets:this.assets})
   }
 }

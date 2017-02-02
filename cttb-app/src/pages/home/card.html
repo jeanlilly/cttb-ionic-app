@@ -1,4 +1,4 @@
-<ion-card width-50>
+<ion-card width-50 (click)="viewPost(item)">
     <img src="{{asset.fields.file.url}}"/>
     <div class="card-title">{{item.fields.title}}</div>
 </ion-card>
